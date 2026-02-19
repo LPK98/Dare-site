@@ -4,9 +4,26 @@ export default function PredictionForm({ onSubmit, loading }) {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [personality, setPersonality] = useState("Romantic");
+  const [comment, setComment] = useState("");
+
+  const clickComments = [
+    "Consulting the stars... and my tea leaves ☕️",
+    "Spinning the marriage wheel... please hold 🎡",
+    "Checking your romantic compatibility with pizza 🍕💕",
+    "Whispering to the algorithm... it blushes 🤖❤️",
+    "Sharpening the prophecy quill... ✒️",
+    "Asking the neighborhood psychic... one sec 🔮",
+    "Counting romantic sunsets... almost there 🌇",
+    "Summoning Cupid's assistant... loading 🏹",
+    "Running dramatic montage... play music 🎬",
+    "Consulting ancient marriage scrolls (PDFs) 📜",
+  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // pick a random funny comment to show while predicting
+    const c = clickComments[Math.floor(Math.random() * clickComments.length)];
+    setComment(c);
     onSubmit({ name, age: Number(age), personality });
   };
 
@@ -59,6 +76,9 @@ export default function PredictionForm({ onSubmit, loading }) {
         {loading && <span className="spinner" aria-hidden="true"></span>}
         {loading ? "Predicting..." : "Predict My Marriage 💍"}
       </button>
+      <div className="click-comment" aria-live="polite">
+        {comment}
+      </div>
     </form>
   );
 }

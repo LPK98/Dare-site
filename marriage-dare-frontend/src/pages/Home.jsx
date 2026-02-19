@@ -21,8 +21,14 @@ export default function Home() {
     <div className="app">
       <div className="card">
         <h1 className="title">Marriage Dare Predictor 💍</h1>
-        <PredictionForm onSubmit={handleSubmit} loading={loading} />
-        <ResultCard result={result} />
+        <div className="card-grid">
+          <div className="card-col">
+            <PredictionForm onSubmit={handleSubmit} loading={loading} />
+          </div>
+          <div className="card-col result-col">
+            <ResultCard result={result} />
+          </div>
+        </div>
       </div>
     </div>
   );
