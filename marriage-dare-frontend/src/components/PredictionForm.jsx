@@ -20,6 +20,7 @@ export default function PredictionForm({ onSubmit, loading }) {
           onChange={(e) => setName(e.target.value)}
           placeholder="Your name"
           required
+          aria-label="Name"
         />
       </label>
 
@@ -31,6 +32,7 @@ export default function PredictionForm({ onSubmit, loading }) {
           onChange={(e) => setAge(e.target.value)}
           min="18"
           required
+          aria-label="Current Age"
         />
       </label>
 
@@ -39,6 +41,7 @@ export default function PredictionForm({ onSubmit, loading }) {
         <select
           value={personality}
           onChange={(e) => setPersonality(e.target.value)}
+          aria-label="Personality"
         >
           <option>Romantic</option>
           <option>Traditional</option>
@@ -47,7 +50,13 @@ export default function PredictionForm({ onSubmit, loading }) {
         </select>
       </label>
 
-      <button className="btn" type="submit" disabled={loading}>
+      <button
+        className="btn"
+        type="submit"
+        disabled={loading}
+        aria-busy={loading}
+      >
+        {loading && <span className="spinner" aria-hidden="true"></span>}
         {loading ? "Predicting..." : "Predict My Marriage 💍"}
       </button>
     </form>

@@ -94,6 +94,10 @@ body {
   transition:
     transform 0.12s ease,
     box-shadow 0.12s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -111,6 +115,23 @@ body {
   border-radius: 10px;
   background: linear-gradient(180deg, #f8fafc, #fff);
   text-align: left;
+}
+
+/* small spinner for loading state */
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 .result h2 {
   font-size: 1.05rem;
