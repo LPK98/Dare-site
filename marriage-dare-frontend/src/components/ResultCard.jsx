@@ -6,14 +6,19 @@ export default function ResultCard({ result }) {
 
   return (
     <div className="result modern-result">
+      <div className="crystal" aria-hidden="true"></div>
       <div className="result-header">
-        <h2>Prediction</h2>
+        <div>
+          <h2>Prediction</h2>
+          <div className="result-sub">The oracle's gentle whisper</div>
+        </div>
+
         <div className="result-age">{predictedMarriageAge}</div>
       </div>
 
       <div className="result-body">
         <span className="result-type-badge">{marriageType}</span>
-        <p className="message">{message}</p>
+        <div className="fancy-message">✨ {message} ✨</div>
       </div>
     </div>
   );

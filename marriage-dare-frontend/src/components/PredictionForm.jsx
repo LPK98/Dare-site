@@ -7,16 +7,16 @@ export default function PredictionForm({ onSubmit, loading }) {
   const [comment, setComment] = useState("");
 
   const clickComments = [
-    "Consulting the stars... and my tea leaves ☕️",
-    "Spinning the marriage wheel... please hold 🎡",
-    "Checking your romantic compatibility with pizza 🍕💕",
-    "Whispering to the algorithm... it blushes 🤖❤️",
-    "Sharpening the prophecy quill... ✒️",
-    "Asking the neighborhood psychic... one sec 🔮",
-    "Counting romantic sunsets... almost there 🌇",
-    "Summoning Cupid's assistant... loading 🏹",
-    "Running dramatic montage... play music 🎬",
-    "Consulting ancient marriage scrolls (PDFs) 📜",
+    "Gazing into the crystal... gentle hums commence 🔮",
+    "Polishing the prophecy gem — sparkle incoming ✨",
+    "Aligning the love constellations — please wait 🌌",
+    "Tuning the Cupid tuner... strings are tightening 🎻🏹",
+    "Scrying the future mirrors — reflections observed 🪞",
+    "Unrolling the fate tapestry — threads are knitting 🧵",
+    "Summoning a dramatic trumpet fanfare... Na na na 🎺",
+    "Dipping a quill in moonlight for poetic results 🌙✒️",
+    "Asking the stars for spoilers — hush, they're shy ⭐️",
+    "Feeding the oracle a cookie — brb 🍪🔮",
   ];
 
   const handleSubmit = (e) => {
