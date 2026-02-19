@@ -15,7 +15,7 @@ function makePrediction({ name = "", age = "", personality = "Romantic" }) {
   ];
   const marriageType = types[Math.floor(Math.random() * types.length)];
   const message = `${name ? name + ", " : ""}Based on your ${String(
-    personality
+    personality,
   ).toLowerCase()} personality, expect ${marriageType} around age ${predictedMarriageAge}.`;
 
   return { predictedMarriageAge, marriageType, message };

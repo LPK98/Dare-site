@@ -10,7 +10,7 @@ export async function getPrediction({
     const res = await axios.post(
       "http://localhost:4000/predict",
       { name, age, personality },
-      { timeout: 2000 }
+      { timeout: 2000 },
     );
     if (res && res.data) return res.data;
   } catch (err) {
